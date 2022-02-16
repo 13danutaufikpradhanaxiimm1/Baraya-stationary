@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <title>TRANSAKSI</title>
+	<link rel="stylesheet" href="C:\Users\MULTIMEDIA SKADA\Documents\per\style.css">
+	<div class="header">
+	<div class="header-list">
+		<ul>
+		  <li><a href="file:///C:/Users/MULTIMEDIA%20SKADA/Documents/per/transaksi.html">Transaksi</a></li>
+		  <li><a href="file:///C:/Users/MULTIMEDIA%20SKADA/Documents/per/produk.html">Produk</a></li>
+		  <li><a href="file:///C:/Users/MULTIMEDIA%20SKADA/Documents/per/kontak.html">Kontak</a></li>
+		  <li><a href="file:///C:/Users/MULTIMEDIA%20SKADA/Documents/per/index.html">Home</a></li>
+		</ul>	
+		</div>
+	</div>
+</head>
+<body>
+
+<center>
+<div class="table">
+
+<br>
+<h1>Transaksi</h1>
+<hr>
+
+<table border="1">
+	<tr>
+		<th colspan="2" bgcolor="green">BARAYA</th>
+	</tr>
+	<tr>
+		<td colspan="2">Kelas XII MM1</td>
+	</tr>
+	<tr>
+		<td>Nama barang</td>
+		<td><input type="text" id="nama"></td>
+	</tr>
+	<tr>
+		<td>Harga barang</td>
+		<td><input type="text" id="harga"></td>
+	</tr>
+	<tr>
+		<td>Jumlah barang</td>
+		<td><input type="text" id="jumlah"></td>
+	</tr>
+	<tr>
+		<td>diskon</td>
+		<td><input type="text" id="diskon"></td>
+	</tr>
+	<tr>
+		<td colspan="2" bgcolor="green"><button  onclick="hitung()">HITUNG</button></td>
+	</tr>
+	<tr>
+		<td>Nama barang yang dibeli</td>
+		<td><input type="text" id="nama1" disabled></td>
+	</tr>
+	<tr>
+		<td>Harga barang yang dibeli</td>
+		<td><input type="text" id="harga1" disabled></td>
+	</tr>
+	<tr>
+		<td>jumlah barang yang dibeli</td>
+		<td><input type="text" id="jumlah1" disabled></td>
+	</tr>
+	<tr>
+		<td>diskon barang yang dibeli</td>
+		<td><input type="text" id="diskon1" disabled></td>
+	</tr>
+	<tr>
+		<td>total harga barang yang dibeli</td>
+		<td><input type="text" id="total" disabled></td>
+	</tr>
+	<tr>
+		<td colspan="2" bgcolor="green"><button onclick="reset()">reset</button> </td>
+	</tr>
+</table>
+<script>
+var nama;
+var jumlah;
+var harga;
+var diskon;
+var total;
+function hitung() {
+	nama = (document.getElementById("nama").value);
+	jumlah = parseFloat(document.getElementById("jumlah").value);
+	harga = parseFloat(document.getElementById("harga").value);
+	diskon = parseFloat(document.getElementById("diskon").value);
+	total = (jumlah *harga-(harga*jumlah)*(diskon/100));
+
+	document.getElementById('nama1').value = nama;
+	document.getElementById('jumlah1').value = jumlah;
+	document.getElementById('diskon1').value = diskon;
+	document.getElementById('harga1').value = harga;
+	document.getElementById('total').value = total;
+	}
+	function reset(){
+	document.getElementById('nama').value ="";
+	document.getElementById('jumlah').value ="" ;
+	document.getElementById('harga').value ="";
+	document.getElementById('diskon').value ="" ;
+	document.getElementById('total').value ="" ;
+	document.getElementById('nama1').value ="";
+	document.getElementById('jumlah1').value ="" ;
+	document.getElementById('harga1').value ="";
+	document.getElementById('diskon1').value ="" ;
+}
+</script>
+
+
+</body>
+</html>
