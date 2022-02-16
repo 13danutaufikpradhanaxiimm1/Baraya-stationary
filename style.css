@@ -146,7 +146,10 @@ background-color:green;
 button:hover{
 background-color:white;
 }
-.contact li{
+.contact{
+height:100px;}
+.contact 
+li{
 	text-align:right;
 	
 }
